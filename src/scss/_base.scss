@@ -1,4 +1,5 @@
 @use './helpers/abstracts' as *;
+@use '../../node_modules/swiper/swiper-bundle' as *;
 
 html {
 	// font-size: calc(100dvw / 1920 * 10);
@@ -42,7 +43,6 @@ body {
 
 /* remove */
 
-
 header,
 footer {
 	padding: 30px 6px;
@@ -79,4 +79,8 @@ h1 {
 	font-weight: normal;
 }
 
+.swiper {
+	width: 20rem;
+	height: 10rem;
+}
 /* remove */
