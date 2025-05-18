@@ -1,15 +1,17 @@
-const body = document.querySelector('body');
-
-import Swiper from 'swiper';
-import 'swiper/css';
+//const body = document.querySelector('body');
 
 const swiper = new Swiper('.swiper', {
+	slidesPerView: 3,
 	loop: true,
-	pagination: {
-		el: '.swiper-pagination',
-	},
+	spaceBetween: 40,
+	// Navigation arrows
 	navigation: {
-		nextEl: '.swiper-button-next',
-		prevEl: '.swiper-button-prev',
+		nextEl: '.learningSliderNext',
+		prevEl: '.learningSliderPrev',
+	},
+
+	pagination: {
+		el: '.learningSliderPag',
+		clickable: true,
 	},
 });

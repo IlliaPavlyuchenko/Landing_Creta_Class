@@ -5,32 +5,19 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Document</title>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Manrope:wght@200..800&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Mukta:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet" />
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 		<link rel="stylesheet" href="css/style.css" />
 	</head>
 	<body>
 		<div class="wrapper">
 			@@include('./html/header.html')
-			<main class="main">
-				<section class="section">
-					<div class="container">
-						<div class="hello">
-							<h1>Landing Creta Class 😊</h1>
-						</div>
-						<div class="swiper">
-							<div class="swiper-wrapper">
-								<div class="swiper-slide">Slide 1</div>
-								<div class="swiper-slide">Slide 2</div>
-								<div class="swiper-slide">Slide 3</div>
-							</div>
-							<div class="swiper-button-next"></div>
-							<div class="swiper-button-prev"></div>
-							<div class="swiper-pagination"></div>
-						</div>
-					</div>
-				</section>
-			</main>
+			<main class="main">@@include('./html/blocks/learning_slider.html')</main>
 			@@include('./html/footer.html')
 		</div>
+		<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 		<script src="js/script.min.js"></script>
 	</body>
 </html>
