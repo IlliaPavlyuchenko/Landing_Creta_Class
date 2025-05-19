@@ -103,7 +103,7 @@
 
 .info__img {
 	display: block;
-	background-image: url(../../imgs/number.png);
+	background-image: url(../imgs/number.png);
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: cover;
@@ -112,13 +112,13 @@
 	width: 100%;
 
 	&.info__img--2 {
-		background-image: url(../../imgs/geometry.png);
+		background-image: url(../imgs/geometry.png);
 	}
 	&.info__img--3 {
-		background-image: url(../../imgs/logic.png);
+		background-image: url(../imgs/logic.png);
 	}
 	&.info__img--4 {
-		background-image: url(../../imgs/problem.png);
+		background-image: url(../imgs/problem.png);
 	}
 }
 
