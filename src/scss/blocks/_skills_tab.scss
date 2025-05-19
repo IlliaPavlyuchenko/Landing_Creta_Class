@@ -1,0 +1,136 @@
+@use './helpers/abstracts' as *;
+
+.tabs_block {
+	max-width: 133rem;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.tabs_nav__list {
+	display: flex;
+	border: 0.2rem solid #ff6d25;
+	border-radius: 2rem;
+	height: 7.6rem;
+	width: 57.2rem;
+	justify-content: space-evenly;
+	margin-bottom: 2.6rem;
+}
+
+.tabs_nav__link {
+	width: 19.2rem;
+	border-left: 0.1rem solid #ff6d25;
+	border-right: 0.1rem solid #ff6d25;
+	color: #ff6d25;
+	font-family: $font_1;
+	font-size: 1.4rem;
+
+	&.active {
+		background-color: #ff6d25;
+		color: #fff;
+	}
+}
+
+.tabs_nav__link_b {
+	font-weight: 700;
+	font-size: 1.7rem;
+}
+
+.tabs_nav__link:nth-child(1) {
+	border-left: 0rem solid #ff6d25;
+	border-right: 0.1rem solid #ff6d25;
+	border-bottom-left-radius: 1.8rem;
+	border-top-left-radius: 1.8rem;
+}
+
+.tabs_nav__link:nth-child(3) {
+	border-left: 0.1rem solid #ff6d25;
+	border-right: 0rem solid #ff6d25;
+	border-bottom-right-radius: 1.8rem;
+	border-top-right-radius: 1.8rem;
+}
+
+.tabs_content__image {
+	display: block;
+	background-image: url(../imgs/1.png);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	max-width: 50.6rem;
+	height: 47.6rem;
+	width: 100%;
+	object-position: center;
+	padding-left: 30rem;
+	margin-left: 8rem;
+
+	&.tabs_content__image--2 {
+		background-image: url(../imgs/kid.png);
+	}
+	&.tabs_content__image--3 {
+		background-image: url(../imgs/lorem.jpg);
+	}
+}
+
+.tabs_content__item {
+	display: none;
+	background: #fef5db;
+	background: linear-gradient(90deg, rgb(254, 253, 219) 0%, rgb(245, 255, 223) 100%);
+}
+
+.tabs_content__item.active {
+	display: flex;
+	align-items: center;
+	min-height: 68.4rem;
+	column-gap: 11.1rem;
+	padding: 3rem;
+	border-radius: 2.6rem;
+	border-top-left-radius: 17.6rem;
+}
+
+.tabs_content__item:nth-child(2) {
+	background: linear-gradient(90deg, rgba(254, 245, 219, 1) 0%, rgba(255, 223, 223, 1) 100%);
+}
+.tabs_content__item:nth-child(3) {
+	background: linear-gradient(90deg, rgb(223, 254, 219) 0%, rgb(223, 245, 255) 100%);
+}
+
+.info__item {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	column-gap: 2.8rem;
+}
+
+.info__img {
+	display: block;
+	background-image: url(../../imgs/number.png);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	min-width: 11.2rem;
+	height: 10.2rem;
+	width: 100%;
+
+	&.info__img--2 {
+		background-image: url(../../imgs/geometry.png);
+	}
+	&.info__img--3 {
+		background-image: url(../../imgs/logic.png);
+	}
+	&.info__img--4 {
+		background-image: url(../../imgs/problem.png);
+	}
+}
+
+.tabs_content__info {
+	margin-right: 10rem;
+	row-gap: 36px;
+	display: flex;
+	flex-direction: column;
+}
+
+.info__text {
+	display: flex;
+	flex-direction: column;
+	min-width: 34.6rem;
+}
