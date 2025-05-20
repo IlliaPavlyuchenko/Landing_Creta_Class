@@ -134,3 +134,15 @@
 	flex-direction: column;
 	min-width: 34.6rem;
 }
+
+.info__title {
+	font-weight: 700;
+	font-size: 2rem;
+	max-width: 20rem;
+}
+
+.info__sup {
+	font-size: 1.4rem;
+	color: $color_gray;
+	
+}

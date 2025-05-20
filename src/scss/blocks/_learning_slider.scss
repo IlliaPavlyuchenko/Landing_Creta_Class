@@ -11,6 +11,7 @@
 	background-color: #fce4ec;
 	border-radius: 4rem;
 	max-width: 35.2rem;
+	min-height: 37rem;
 
 	&.learning_slider__item--v2 {
 		background-color: #fff0cb;
@@ -90,8 +91,13 @@
 }
 
 .learning_slider__pag {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
 	text-align: center;
-	padding-top: 3.8rem;
+	width: 100%;
+	max-width: 11rem;
+	margin: 3.8rem auto 0;
 }
 .swiper-pagination-bullet {
 	width: 20px;
