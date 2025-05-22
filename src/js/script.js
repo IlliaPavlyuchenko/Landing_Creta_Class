@@ -48,3 +48,24 @@ function tabs(tabsBlockSelector) {
 }
 
 tabs('.tabsBlock1');
+
+
+function accordion(accordionBlockSelector) {
+	const accordionTitleAll = document.querySelectorAll(accordionBlockSelector + " [data-accordion-title]");
+
+	accordionTitleAll.forEach(function (item) {
+		item.addEventListener("click", function () {
+			if (item.classList.contains("active")) {
+				item.classList.remove("active");
+				return;
+			} else {
+				accordionTitleAll.forEach(function (i) {
+					i.classList.remove("active");
+				});
+				item.classList.add("active");
+			}
+		});
+	});
+}
+
+accordion(".accordionFaq");
