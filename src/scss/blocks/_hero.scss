@@ -3,6 +3,7 @@
 .hero {
 	display: flex;
 	column-gap: 10rem;
+	align-items: center;
 }
 
 .hero__col {
@@ -140,4 +141,12 @@
 	font-size: 1.8rem;
 	color: $color_accent;
 	text-transform: uppercase;
+}
+
+.hero__img {
+	width: 100%;
+	height: 100%;
+	display: block;
+	object-fit: contain;
+	object-position: center;
 }
