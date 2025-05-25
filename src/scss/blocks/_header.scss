@@ -1,0 +1,31 @@
+@use './helpers/abstracts' as *;
+
+.header {
+	display: block;
+	background-color: $color_white;
+	box-shadow: 0px 10px 50px 0px #0000000d;
+	padding: 3.3rem 0;
+    margin-bottom: 5rem;
+}
+
+.header__in {
+	display: flex;
+	justify-content: space-between;
+	column-gap: 10rem;
+	align-items: center;
+}
+
+.header__items {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+}
+
+.header__logo {
+    margin-right: 4.7rem;
+}
+
+ .cookie_btns {
+    display: flex;
+    column-gap: 2.7rem;
+ }
