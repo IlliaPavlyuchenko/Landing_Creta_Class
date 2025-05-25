@@ -1,0 +1,6 @@
+@forward '../helpers/extends/buttons_extends';
+
+.cookie_btn {
+	@extend %cookie_btn;
+	@extend %btn_size_2;
+}

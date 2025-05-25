@@ -27,6 +27,23 @@
 		opacity: 0.9;
 	}
 }
+%cookie_btn {
+	@include st_btn;
+
+	font-weight: 700;
+	text-transform: uppercase;
+	color: $color_darkgreen;
+	background-color: $color_white;
+	transition: 0.3s ease;
+	border: 0.2rem solid $color_green;
+
+	&:hover {
+		border: 0.2rem solid $color_green;
+		box-shadow: 0px 0px 15px 0px $color_green;
+		color: $color_white;
+		background-color: $color_green;
+	}
+}
 
 //size extends
 %btn_size_1 {
@@ -38,6 +55,17 @@
 	font-size: 1.8rem;
 
 	border-radius: 0.9rem;
+}
+
+%btn_size_2 {
+	min-width: 16.2rem;
+	height: 5.4rem;
+	padding: 0 1.5rem;
+
+	line-height: 5.4rem;
+	font-size: 1.7rem;
+
+	border-radius: 1.5rem;
 }
 
 
