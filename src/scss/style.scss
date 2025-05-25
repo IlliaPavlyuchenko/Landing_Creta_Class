@@ -1,8 +1,12 @@
 @use './helpers/reset';
 @use './base';
 
+// components
+@use './components/btn_orange';
+
 //blocks
 
+@use './blocks/footer';
 @use './blocks/hero';
 @use './blocks/learning_slider';
 @use './blocks/skills_tab';
