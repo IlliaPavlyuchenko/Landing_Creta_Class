@@ -11,7 +11,7 @@
 .header__in {
 	display: flex;
 	justify-content: space-between;
-	column-gap: 10rem;
+	column-gap: 5rem;
 	align-items: center;
 }
 
@@ -32,11 +32,23 @@
 
 .cookie_img {
 	display: block;
-	margin-left: 0.8rem;
+	margin-left: 0.9rem;
 	width: 1.8rem;
 	height: 1.8rem;
 	background-color: currentColor;
 	mask-image: url(../imgs/cookie.svg);
+	mask-size: contain;
+	mask-repeat: no-repeat;
+	mask-position: center;
+}
+
+.header_btn__star_img {
+	display: block;
+	margin-right: 1.5rem;
+	width: 1.8rem;
+	height: 1.8rem;
+	background-color: currentColor;
+	mask-image: url(../imgs/star.svg);
 	mask-size: contain;
 	mask-repeat: no-repeat;
 	mask-position: center;
