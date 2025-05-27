@@ -35,17 +35,18 @@
 	color: $color_white;
 	background-color: $color_green;
 	transition: 0.3s ease;
-	box-shadow: 0px 3.01px 7.52px 0px #9cffb180;
-	box-shadow: 0px 0px 0px 1.5px #2cc84d;
-	box-shadow: 0px 1.5px 1.5px 0px #00000024;
-	box-shadow: 0px 1.5px 0px 0px #9cffb1 inset;
+	box-shadow:
+		0px 3.01px 7.52px 0px #9cffb180,
+		0px 0px 0px 1.5px #2cc84d,
+		0px 1.5px 1.5px 0px #00000024,
+		0px 1.5px 0px 0px #9cffb1 inset;
 
-	border: 0.2rem solid $color_green;
+	//border: 0.2rem solid $color_green;
 
 	&:hover {
 		color: $color_green;
 		background-color: $color_white;
-		box-shadow: 0px 0px 15px 0px $color_green;
+		//box-shadow: 0px 0px 20px 0px $color_green;
 	}
 }
 
