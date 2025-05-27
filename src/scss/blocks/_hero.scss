@@ -4,6 +4,7 @@
 	display: flex;
 	column-gap: 10rem;
 	align-items: center;
+	padding-top: 20rem;
 }
 
 .hero__col {
@@ -140,6 +141,11 @@
 	font-size: 1.8rem;
 	color: $color_accent;
 	text-transform: uppercase;
+}
+
+.hero__img_w {
+	max-width: 68.1rem;
+	max-height: 62.2rem;
 }
 
 .hero__img {

@@ -41,6 +41,11 @@
 	& a {
 		color: $color_black;
 		text-decoration: none;
-        max-width: 35rem;
+		transition: color $transition_dur ease-in-out;
+		&:hover,
+		&:active,
+		&:focus {
+			color: $color_accent;
+		}
 	}
 }
