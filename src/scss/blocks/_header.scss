@@ -8,6 +8,11 @@
 	width: 100%;
 	position: fixed;
 	z-index: $z_index_header;
+	transition: all $transition_dur ease-in-out;
+
+	&.on_scroll {
+		padding: 1rem 0;
+	}
 }
 
 .header__in {
