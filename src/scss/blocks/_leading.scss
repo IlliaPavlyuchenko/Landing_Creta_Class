@@ -1,5 +1,11 @@
 @use './helpers/abstracts' as *;
 
+.container.container_leading--mob {
+    @include bp($point_1) {
+		padding: 0;
+	}
+}
+
 .leading_block {
 	max-width: 1520px;
 	height: 100%;
@@ -10,6 +16,10 @@
 	background-position: center;
 	position: relative;
 	padding-top: 2.5rem;
+
+	@include bp($point_1) {
+		width: 100%;
+	}
 }
 
 .trophy__title {
@@ -65,12 +75,30 @@
 		background-size: contain;
 		background-position: center;
 	}
+
+	@include bp($point_1) {
+		flex-direction: column;
+		row-gap: 4rem;
+        padding-bottom: 5rem;
+
+        &::before {
+            display: none;
+        }
+        &::after {
+            display: none;
+        }
+	}
 }
 
 .leading__card {
 	display: flex;
 	width: calc(50% - 0.5rem);
 	justify-content: space-evenly;
+
+	@include bp($point_1) {
+		width: 100%;
+		justify-content: center;
+	}
 }
 
 .leading__card_bg {

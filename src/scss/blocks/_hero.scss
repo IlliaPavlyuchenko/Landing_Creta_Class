@@ -5,10 +5,19 @@
 	column-gap: 10rem;
 	align-items: center;
 	padding-top: 20rem;
+
+	@include bp($point_3) {
+		flex-direction: column;
+		row-gap: 4rem;
+	}
 }
 
 .hero__col {
 	width: calc(50% - 5rem);
+
+	@include bp($point_3) {
+		width: calc(80% - 5rem);
+	}
 }
 
 .hero__title {

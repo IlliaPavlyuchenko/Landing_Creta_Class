@@ -33,8 +33,14 @@
 }
 
 .cookie_btns {
-	display: flex;
-	column-gap: 2.7rem;
+	@include bp($point_2, min) {
+		display: flex;
+		column-gap: 2.7rem;
+	}
+
+	@include bp($point_3) {
+		display: none;
+	}
 }
 
 .cookie_img {

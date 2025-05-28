@@ -11,6 +11,12 @@
 	justify-content: space-between;
 	column-gap: 10rem;
 	align-items: center;
+
+	@include bp($point_5) {
+		flex-direction: column;
+		justify-content: center;
+		row-gap: 4rem;
+	}
 }
 
 .logo {
@@ -47,5 +53,9 @@
 		&:focus {
 			color: $color_accent;
 		}
+	}
+
+	@include bp($point_5) {
+		max-width: 33rem;
 	}
 }
