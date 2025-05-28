@@ -48,6 +48,10 @@ body {
 	&:has(+.section__descr) {
 		margin-bottom: 1rem;
 	}
+
+	&.section__title--capitalize {
+		text-transform: capitalize;
+	}
 }
 
 .section__descr {
