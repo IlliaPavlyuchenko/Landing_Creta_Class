@@ -55,6 +55,12 @@
 	mask-position: center;
 }
 
+.header__btn {
+	@include bp($point_5) {
+		display: none;
+	}
+}
+
 .header_btn__star_img {
 	display: block;
 	margin-right: 1.5rem;

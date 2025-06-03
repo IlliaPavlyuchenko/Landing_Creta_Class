@@ -50,7 +50,7 @@ body {
 .section__title {
 	font-family: $font_2;
 	font-weight: 800;
-	font-size: 4.8rem;
+	//font-size: 4.8rem;
 	line-height: 1.6;
 
 	&:has(+ .section__descr) {
@@ -59,6 +59,18 @@ body {
 
 	&.section__title--capitalize {
 		text-transform: capitalize;
+	}
+
+	@include bp($point_2, min) {
+		font-size: 4.8rem;
+	}
+
+	@media (min-width: $point_6) and (max-width: $point_3) {
+		font-size: 3.4rem;
+	}
+
+	@include bp($point_6) {
+		font-size: 3rem;
 	}
 }
 
