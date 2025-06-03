@@ -1,9 +1,17 @@
 @use './helpers/abstracts' as *;
 
 html {
-	// font-size: calc(100dvw / 1920 * 10);
+	@include bp(1920px, min) {
+		font-size: 10px;
+	}
 
-	font-size: 10px;
+	@media (min-width: $point_2) and (max-width: 1920px) {
+		font-size: calc(100dvw / 1920 * 10);
+	}
+
+	@include bp($point_3) {
+		font-size: 10px;
+	}
 }
 
 html,
@@ -45,7 +53,7 @@ body {
 	font-size: 4.8rem;
 	line-height: 1.6;
 
-	&:has(+.section__descr) {
+	&:has(+ .section__descr) {
 		margin-bottom: 1rem;
 	}
 
@@ -59,9 +67,9 @@ body {
 	font-weight: 500;
 	font-size: 1.6rem;
 	line-height: 1.6;
-	
+
 	&.section__descr--v2 {
-		color: #7B7B7B;
+		color: #7b7b7b;
 	}
 }
 
