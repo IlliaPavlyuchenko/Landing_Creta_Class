@@ -1,7 +1,7 @@
 @use './helpers/abstracts' as *;
 
 .container.container_leading--mob {
-    @include bp($point_1) {
+	@include bp($point_1) {
 		padding: 0;
 	}
 }
@@ -17,7 +17,7 @@
 	position: relative;
 	padding-top: 2.5rem;
 
-	@include bp($point_1) {
+	@include bp($point_2) {
 		width: 100%;
 	}
 }
@@ -76,18 +76,21 @@
 		background-position: center;
 	}
 
-	@include bp($point_1) {
-		
+	@include bp($point_2) {
 		flex-direction: column;
 		row-gap: 4rem;
-        padding-bottom: 5rem;
+		padding-bottom: 5rem;
 
-        &::before {
-            display: none;
-        }
-        &::after {
-            display: none;
-        }
+		&::before {
+			display: none;
+		}
+		&::after {
+			display: none;
+		}
+	}
+
+	@include bp($point_5) {
+		transform: scale(0.95);
 	}
 }
 
@@ -109,7 +112,7 @@
 	height: 34.3rem;
 	background-image: url(../imgs/comment_card_1.svg);
 	background-repeat: no-repeat;
-	background-size: cover;
+	background-size: contain;
 	background-position: center;
 
 	&.leading__card_bg--v2 {
@@ -124,10 +127,11 @@
 
 .card_col__info_w {
 	position: absolute;
-	width: 30.8rem;
+	max-width: 30.8rem;
 	height: 18.9rem;
 	top: 10rem;
 	left: 10rem;
+	
 }
 
 .card_col__info {
@@ -147,6 +151,10 @@
 	&.card_col__user--v2 {
 		top: 4rem;
 		left: 41.5rem;
+	}
+
+	@include bp($point_6) {
+		display: none;
 	}
 }
 
