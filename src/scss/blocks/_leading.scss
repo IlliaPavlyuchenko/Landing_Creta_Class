@@ -1,7 +1,7 @@
 @use './helpers/abstracts' as *;
 
 .container.container_leading--mob {
-	@include bp($point_1) {
+	@include bp($point_2) {
 		padding: 0;
 	}
 }
@@ -76,7 +76,7 @@
 		background-position: center;
 	}
 
-	@include bp($point_2) {
+	@include bp($point_3) {
 		flex-direction: column;
 		row-gap: 4rem;
 		padding-bottom: 5rem;

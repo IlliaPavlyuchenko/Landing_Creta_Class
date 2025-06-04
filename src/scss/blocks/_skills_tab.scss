@@ -12,13 +12,12 @@
 	border: 0.2rem solid #ff6d25;
 	border-radius: 2rem;
 	height: 7.6rem;
-	width: 57.2rem;
+	max-width: 57.2rem;
 	justify-content: space-evenly;
 	margin-bottom: 2.6rem;
 }
 
 .tabs_nav__link {
-	width: 19.2rem;
 	border-left: 0.1rem solid #ff6d25;
 	border-right: 0.1rem solid #ff6d25;
 	color: #ff6d25;
@@ -28,6 +27,18 @@
 	&.active {
 		background-color: #ff6d25;
 		color: #fff;
+	}
+
+	@include bp($point_2, min) {
+		width: 19.2rem;
+	}
+
+	@media (min-width: $point_5) and (max-width: $point_3) {
+		width: 19.2rem;
+	}
+
+	@include bp($point_5) {
+		width: 30dvw;
 	}
 }
 
@@ -51,7 +62,6 @@
 }
 
 .tabs_content__image {
-	display: block;
 	background-image: url(../imgs/1.png);
 	background-repeat: no-repeat;
 	background-position: center;
@@ -68,6 +78,13 @@
 	}
 	&.tabs_content__image--3 {
 		background-image: url(../imgs/lorem.jpg);
+	}
+
+	@include bp($point_2, min) {
+		display: block;
+	}
+	@include bp($point_3) {
+		display: none;
 	}
 }
 
@@ -106,8 +123,7 @@
 	background-image: url(../imgs/number.png);
 	background-repeat: no-repeat;
 	background-position: center;
-	background-size: cover;
-	min-width: 11.2rem;
+
 	height: 10.2rem;
 	width: 100%;
 
@@ -120,19 +136,58 @@
 	&.info__img--4 {
 		background-image: url(../imgs/problem.png);
 	}
+
+	@include bp($point_2, min) {
+		min-width: 11.2rem;
+		background-size: cover;
+	}
+
+	@media (min-width: $point_5) and (max-width: $point_3) {
+		width: 11.2rem;
+		background-size: contain;
+	}
+
+	@include bp($point_5) {
+		max-width: 7rem;
+		background-size: contain;
+	}
 }
 
 .tabs_content__info {
-	margin-right: 10rem;
 	row-gap: 36px;
 	display: flex;
 	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+
+	@include bp($point_2, min) {
+		margin-right: 10rem;
+	}
+
+	@media (min-width: $point_5) and (max-width: $point_3) {
+		padding: 0 5rem;
+	}
+
+	@include bp($point_5) {
+		padding: 0;
+	}
 }
 
 .info__text {
 	display: flex;
 	flex-direction: column;
-	min-width: 34.6rem;
+	
+	@include bp($point_2, min) {
+		min-width: 34.6rem;
+	}
+
+	@media (min-width: $point_5) and (max-width: $point_3) {
+		max-width: 60rem;
+	}
+
+	@include bp($point_5) {
+		min-width: 20rem;
+	}
 }
 
 .info__title {
