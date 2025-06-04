@@ -116,6 +116,7 @@
 	flex-direction: row;
 	align-items: center;
 	column-gap: 2.8rem;
+	justify-content: space-between;
 }
 
 .info__img {
@@ -176,13 +177,14 @@
 .info__text {
 	display: flex;
 	flex-direction: column;
-	
+
 	@include bp($point_2, min) {
 		min-width: 34.6rem;
 	}
 
 	@media (min-width: $point_5) and (max-width: $point_3) {
 		max-width: 60rem;
+		
 	}
 
 	@include bp($point_5) {

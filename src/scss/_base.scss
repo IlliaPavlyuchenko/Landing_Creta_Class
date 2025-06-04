@@ -51,7 +51,7 @@ body {
 	font-family: $font_2;
 	font-weight: 800;
 	//font-size: 4.8rem;
-	line-height: 1.6;
+	//line-height: 1.6;
 
 	&:has(+ .section__descr) {
 		margin-bottom: 1rem;
@@ -63,14 +63,17 @@ body {
 
 	@include bp($point_2, min) {
 		font-size: 4.8rem;
+		line-height: 1.6;
 	}
 
 	@media (min-width: $point_6) and (max-width: $point_3) {
 		font-size: 3.4rem;
+		line-height: 1.4;
 	}
 
 	@include bp($point_6) {
 		font-size: 3rem;
+		line-height: 1.1;
 	}
 }
 

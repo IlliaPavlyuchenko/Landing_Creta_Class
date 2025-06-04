@@ -1,10 +1,8 @@
 //const body = document.querySelector('body');
 
 const swiper = new Swiper('.swiper', {
-	slidesPerView: 3,
 	loop: true,
 	spaceBetween: 40,
-	slidesPerGroup: 3,
 	// Navigation arrows
 	navigation: {
 		nextEl: '.learningSliderNext',
@@ -14,6 +12,21 @@ const swiper = new Swiper('.swiper', {
 	pagination: {
 		el: '.learningSliderPag',
 		clickable: true,
+	},
+
+	breakpoints: {
+		640: {
+			slidesPerView: 1,
+			slidesPerGroup: 1,
+		},
+		768: {
+			slidesPerView: 2,
+			slidesPerGroup: 2,
+		},
+		1024: {
+			slidesPerView: 3,
+			slidesPerGroup: 3,
+		},
 	},
 });
 

@@ -1,9 +1,12 @@
 @use './helpers/abstracts' as *;
+//@use './helpers/mixins/breakpoints' as *;
 
 .learning_slider_block {
 	position: relative;
 
-	padding: 0 10rem;
+	@include bp($point_2, min) {
+		padding: 0 10rem;
+	}
 }
 
 .learning_slider__item {
@@ -69,23 +72,28 @@
 // }
 
 .learning_slider__btn {
-	position: absolute;
-	top: 50%;
-	transform: translateY(-50%);
-	background-image: url(../imgs/Arrow.svg);
-	background-repeat: no-repeat;
-	background-position: center;
-	background-size: contain;
-	width: 3.6rem;
-	height: 3rem;
-	cursor: pointer;
+	@include bp($point_2, min) {
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+		background-image: url(../imgs/Arrow.svg);
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: contain;
+		width: 3.6rem;
+		height: 3rem;
+		cursor: pointer;
 
-	&.learning_slider__btn--prev {
-		left: 0;
+		&.learning_slider__btn--prev {
+			left: 0;
+		}
+		&.learning_slider__btn--next {
+			right: 0;
+			background-image: url(../imgs/Arrow_2.svg);
+		}
 	}
-	&.learning_slider__btn--next {
-		right: 0;
-		background-image: url(../imgs/Arrow_2.svg);
+	@include bp($point_3) {
+		display: none;
 	}
 }
 
@@ -95,14 +103,26 @@
 	justify-content: space-between;
 	text-align: center;
 	width: 100%;
-	max-width: 11rem;
+
 	margin: 3.8rem auto 0;
+
+	@include bp($point_2, min) {
+		max-width: 11rem;
+	}
+
+	@media (min-width: $point_6) and (max-width: $point_3) {
+		max-width: 27rem;
+	}
+
+	@include bp($point_6) {
+		max-width: 30rem;
+	}
 }
 .swiper-pagination-bullet {
-	width: 20px;
-	height: 20px;
+	width: 2rem;
+	height: 2rem;
 	text-align: center;
-	line-height: 20px;
+	line-height: 2rem;
 	opacity: 1;
 	background: transparent;
 	border: 0.2rem solid #974e24;
