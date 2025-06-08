@@ -1,0 +1,48 @@
+@use './helpers/abstracts' as *;
+
+.container.container--bg {
+	background-color: #f6f6f6;
+	position: relative;
+	min-height: 100rem;
+	padding-top: 11rem;
+    max-width: 196rem;
+}
+
+.video_block__decor {
+	background-image: url(../imgs/video_block_decor.svg);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: contain;
+	max-width: 18rem;
+	height: 18rem;
+	width: 100%;
+	object-position: center;
+	position: absolute;
+	top: 3rem;
+	right: -3.6rem;
+}
+
+.video_block__decor_img {
+	background-image: url(../imgs/video_block_bg_img.png);
+	background-repeat: no-repeat;
+	background-position: bottom;
+	background-size: contain;
+	max-width: 88rem;
+	max-height: 100rem;
+	width: 100%;
+	height: 100%;
+	object-position: center;
+	position: absolute;
+	bottom: -4.1rem;
+	left: -6.6rem;
+}
+
+
+.video__player {
+	width: 84rem;
+	height: 58rem;
+	background-color: tomato;
+	display: flex;
+	justify-self: flex-end;
+    align-self: center;
+}
