@@ -39,19 +39,24 @@
 
 .video__player {
 	max-width: 84rem;
-    width: 100%;
+	width: 100%;
 	height: 58rem;
-    border: 0.1rem solid #FFBFBF;
-    border-bottom: 0.8rem solid #FFBFBF;
-    border-radius: 2.5rem;
+	border: 0.1rem solid #ffbfbf;
+	border-bottom: 0.8rem solid #ffbfbf;
+	border-radius: 2.5rem;
 	display: flex;
 	justify-self: flex-end;
 	align-self: center;
 	margin-right: 15rem;
-    overflow: hidden;
+	overflow: hidden;
+
+	&.video__player--v2 {
+		border: 0;
+		cursor: pointer;
+	}
 }
 
 .video {
-    width: 100%;
-    height: 100%;
+	width: 100%;
+	height: 100%;
 }

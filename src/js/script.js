@@ -62,26 +62,25 @@ function tabs(tabsBlockSelector) {
 
 tabs('.tabsBlock1');
 
-
 function accordion(accordionBlockSelector) {
-	const accordionTitleAll = document.querySelectorAll(accordionBlockSelector + " [data-accordion-title]");
+	const accordionTitleAll = document.querySelectorAll(accordionBlockSelector + ' [data-accordion-title]');
 
 	accordionTitleAll.forEach(function (item) {
-		item.addEventListener("click", function () {
-			if (item.classList.contains("active")) {
-				item.classList.remove("active");
+		item.addEventListener('click', function () {
+			if (item.classList.contains('active')) {
+				item.classList.remove('active');
 				return;
 			} else {
 				accordionTitleAll.forEach(function (i) {
-					i.classList.remove("active");
+					i.classList.remove('active');
 				});
-				item.classList.add("active");
+				item.classList.add('active');
 			}
 		});
 	});
 }
 
-accordion(".accordionFaq");
+accordion('.accordionFaq');
 
 const header = document.querySelector('.header');
 const toggleClass = 'on_scroll';
@@ -94,3 +93,14 @@ window.addEventListener('scroll', () => {
 		header.classList.remove(toggleClass);
 	}
 });
+
+const video = document.getElementById('myVideo');
+
+video.addEventListener('click', function () {
+	video.play();
+});
+
+video.addEventListener('ended', () => {
+    video.currentTime = 0;
+    video.load();
+  });
