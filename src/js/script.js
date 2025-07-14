@@ -94,13 +94,15 @@ window.addEventListener('scroll', () => {
 	}
 });
 
-const video = document.getElementById('myVideo');
+// 2-nd video script
 
-video.addEventListener('click', function () {
-	video.play();
-});
+// const video = document.getElementById('myVideo');
 
-video.addEventListener('ended', () => {
-    video.currentTime = 0;
-    video.load();
-  });
+// video.addEventListener('click', function () {
+// 	video.play();
+// });
+
+// video.addEventListener('ended', () => {
+//     video.currentTime = 0;
+//     video.load();
+//   });
