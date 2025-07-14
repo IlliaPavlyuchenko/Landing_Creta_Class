@@ -65,13 +65,11 @@
 	background-image: url(../imgs/1.png);
 	background-repeat: no-repeat;
 	background-position: center;
-	background-size: cover;
+	background-size: contain;
 	max-width: 50.6rem;
 	height: 47.6rem;
 	width: 100%;
 	object-position: center;
-	padding-left: 30rem;
-	margin-left: 8rem;
 
 	&.tabs_content__image--2 {
 		background-image: url(../imgs/kid.png);
@@ -88,6 +86,10 @@
 	}
 }
 
+.tabs_content {
+	width: 100%;
+}
+
 .tabs_content__item {
 	display: none;
 	background: #fef5db;
@@ -97,8 +99,8 @@
 .tabs_content__item.active {
 	display: flex;
 	align-items: center;
+	justify-content: space-evenly;
 	min-height: 68.4rem;
-	column-gap: 11.1rem;
 	padding: 3rem;
 	border-radius: 2.6rem;
 	border-top-left-radius: 17.6rem;
@@ -116,7 +118,19 @@
 	flex-direction: row;
 	align-items: center;
 	column-gap: 2.8rem;
-	justify-content: space-between;
+	min-width: 48.5rem;
+
+	@include bp($point_2, min) {
+		justify-content: space-between;
+	}
+
+	@media (min-width: $point_5) and (max-width: $point_3) {
+		justify-content: space-evenly;
+	}
+
+	@include bp($point_5) {
+		justify-content: flex-start;
+	}
 }
 
 .info__img {
@@ -139,8 +153,8 @@
 	}
 
 	@include bp($point_2, min) {
-		min-width: 11.2rem;
-		background-size: cover;
+		max-width: 11.2rem;
+		background-size: contain;
 	}
 
 	@media (min-width: $point_5) and (max-width: $point_3) {
@@ -158,11 +172,10 @@
 	row-gap: 36px;
 	display: flex;
 	flex-direction: column;
-	align-items: center;
 	justify-content: center;
 
 	@include bp($point_2, min) {
-		margin-right: 10rem;
+		margin-right: 0;
 	}
 
 	@media (min-width: $point_5) and (max-width: $point_3) {
@@ -179,16 +192,15 @@
 	flex-direction: column;
 
 	@include bp($point_2, min) {
-		min-width: 34.6rem;
+		max-width: 34.6rem;
 	}
 
-	@media (min-width: $point_5) and (max-width: $point_3) {
+	@media (min-width: $point_6) and (max-width: $point_3) {
 		max-width: 60rem;
-		
 	}
 
-	@include bp($point_5) {
-		min-width: 20rem;
+	@include bp($point_6) {
+		max-width: 45dvw;
 	}
 }
 
