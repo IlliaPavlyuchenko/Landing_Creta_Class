@@ -3,9 +3,19 @@
 .container.container--bg {
 	background-color: #f6f6f6;
 	position: relative;
-	min-height: 100rem;
-	padding-top: 11rem;
 	max-width: 192rem;
+	z-index: 0;
+
+	@include bp($point_2, min) {
+		min-height: 100rem;
+		padding-top: 11rem;
+	}
+
+	@include bp($point_3) {
+		max-height: 100rem;
+		padding-top: 5rem;
+		padding-bottom: 3rem;
+	}
 }
 
 .video_block__decor {
@@ -20,6 +30,7 @@
 	position: absolute;
 	top: 3rem;
 	right: -3.6rem;
+	z-index: -1;
 }
 
 .video_block__decor_img {
@@ -35,25 +46,39 @@
 	position: absolute;
 	bottom: -4.1rem;
 	left: -6.6rem;
+
+	@include bp($point_3) {
+		display: none;
+	}
 }
 
 .video__player {
-	max-width: 84rem;
 	width: 100%;
-	height: 58rem;
 	border: 0.1rem solid #ffbfbf;
 	border-bottom: 0.8rem solid #ffbfbf;
 	border-radius: 2.5rem;
 	display: flex;
-	justify-self: flex-end;
 	align-self: center;
-	margin-right: 15rem;
 	overflow: hidden;
 
 	// &.video__player--v2 {
 	// 	border: 0;
 	// 	cursor: pointer;
 	// }
+
+	@include bp($point_2, min) {
+		justify-self: flex-end;
+		margin-right: 15rem;
+		height: 58rem;
+		max-width: 84rem;
+	}
+
+	@include bp($point_3) {
+		justify-self: center;
+		margin-right: 0;
+		height: 35rem;
+		max-width: 60rem;
+	}
 }
 
 .video {
