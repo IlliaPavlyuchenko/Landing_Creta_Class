@@ -39,7 +39,14 @@ body {
 
 .section {
 	width: 100%;
-	padding: 8rem 0;
+
+	@include bp($point_2, min) {
+		padding: 8rem 0;
+	}
+
+	@include bp($point_3) {
+		padding: 5rem 0;
+	}
 }
 
 .section__head {

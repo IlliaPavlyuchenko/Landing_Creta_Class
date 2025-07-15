@@ -4,15 +4,17 @@
 	display: flex;
 	column-gap: 10rem;
 	align-items: center;
-	padding-top: 20rem;
+	
 
 	@include bp($point_2, min) {
 		flex-direction: row;
+		padding-top: 20rem;
 	}
 
 	@include bp($point_3) {
-		flex-direction: column;
-		row-gap: 4rem;
+		flex-direction: column-reverse;
+		row-gap: 9rem;
+		padding-top: 9rem;
 	}
 }
 
