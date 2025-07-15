@@ -2,5 +2,12 @@
 
 .map {
     width: 100%;
-    min-height: 80rem;
+
+    @include bp($point_2, min) {
+		 min-height: 80rem;
+	}
+
+	@include bp($point_3) {
+		 min-height: 45rem;
+	}
 }

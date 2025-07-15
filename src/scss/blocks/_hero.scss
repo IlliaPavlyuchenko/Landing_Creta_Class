@@ -180,8 +180,12 @@
 .hero_form__text_cta_span {
 	font-weight: 700;
 	font-size: 1.8rem;
-	color: $color_accent;
 	text-transform: uppercase;
+
+	& a{
+		color: $color_accent;
+		text-decoration: none;
+	}
 }
 
 .hero__img_w {
