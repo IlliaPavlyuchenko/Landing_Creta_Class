@@ -40,6 +40,16 @@
 .footer__btn {
 	margin-top: 2.5rem;
 }
+
+.btn_orange_1 {
+	
+	@include bp($point_5) {
+	font-size: 1.6rem;
+	min-width: 28rem;
+	}
+	
+}
+
 .footer__info {
 	display: flex;
 	font-weight: 400;
@@ -60,6 +70,7 @@
 	}
 
 	@include bp($point_5) {
-		max-width: 33rem;
+		max-width: 28rem;
+		font-size: 1.8rem;
 	}
 }
