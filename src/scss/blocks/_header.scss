@@ -4,11 +4,18 @@
 	display: block;
 	background-color: $color_white;
 	box-shadow: 0px 10px 50px 0px #0000000d;
-	padding: 3.3rem 0;
 	width: 100%;
 	position: fixed;
 	z-index: $z_index_header;
 	transition: all $transition_dur ease-in-out;
+
+	@include bp($point_2, min) {
+		padding: 3.3rem 0;
+	}
+
+	@include bp($point_3) {
+		padding: 2rem 0;
+	}
 
 	&.on_scroll {
 		padding: 1rem 0;
@@ -18,8 +25,15 @@
 .header__in {
 	display: flex;
 	justify-content: space-between;
-	column-gap: 5rem;
 	align-items: center;
+
+	@include bp($point_4, min) {
+		column-gap: 5rem;
+	}
+
+	@include bp($point_5) {
+		column-gap: 0.8rem;
+	}
 }
 
 .header__items {
@@ -30,6 +44,10 @@
 
 .header__logo {
 	margin-right: 4.7rem;
+
+	@include bp($point_5) {
+		margin-right: 0;
+	}
 }
 
 .cookie_btns {
@@ -55,9 +73,11 @@
 	mask-position: center;
 }
 
-.header__btn {
+.btn_green {
 	@include bp($point_5) {
-		display: none;
+		min-width: 10rem;
+		height: 4rem;
+		font-size: 1.3rem;
 	}
 }
 
@@ -71,4 +91,8 @@
 	mask-size: contain;
 	mask-repeat: no-repeat;
 	mask-position: center;
+
+	@include bp($point_5) {
+		display: none;
+	}
 }

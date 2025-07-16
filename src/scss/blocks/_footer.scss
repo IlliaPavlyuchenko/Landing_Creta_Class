@@ -23,6 +23,10 @@
 	width: 26rem;
 	height: 5.35rem;
 	display: block;
+
+	@include bp($point_5) {
+ 	 	width: 16rem;
+ 	 }
 }
 
 .logo__img {
