@@ -67,12 +67,19 @@
 
 .accordion__content {
 	font-weight: 500;
-	font-size: 2.7rem;
 	color: $color_gray;
 	opacity: 0;
 	visibility: hidden;
 	pointer-events: none;
 	height: 0;
+
+	@include bp($point_2, min) {
+		font-size: 2.7rem;
+	}
+
+	@include bp($point_3) {
+		font-size: 1.8rem;
+	}
 }
 
 .accordion__title.active + .accordion__content {
